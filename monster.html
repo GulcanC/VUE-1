@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UDEMY-Vue Basics-Monster Slayer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="monster.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="monster.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Monster Slayer</h1>
+    </header>
+    <div id="game">
+      <section id="monster" class="container">
+        <h2>Monster Health</h2>
+        <!--🐞 2- when we click attack button attackMonster method will be executed and "healthbar__value" will change-->
+        <div class="healthbar">
+          <!--🐞 4- you can change the style for monsterHealth-->
+          <div class="healthbar__value" :style="monsterBarStyles"></div>
+        </div>
+      </section>
+      <section id="player" class="container">
+        <h2>Your Health</h2>
+        <!--🐞 3- when we click attack button attackMonster method will be executed and "healthbar__value" will change-->
+        <div class="healthbar">
+          <!--🐞 5- you can change the style for playerHealth-->
+          <div class="healthbar__value" :style="playerBarStyles"></div>
+        </div>
+      </section>
+      <!--🐞8- add a new section that includes "h2" and "h3" elements.for game over  -->
+      <!--🐞9- bind winner property-->
+      <section class="container" v-if="winner">
+        <h2>Game Over!</h2>
+        <!--🐞10- bind if functions to paragraph-->
+        <h3 v-if="winner === 'monster'">You lost!</h3>
+        <h3 v-else-if="winner === 'player'">You won!</h3>
+        <h3 v-else>It is a draw!</h3>
+        <!--🐞11- add a new button to start game. got t js to add new method -->
+        <!--🐞12- bind "startGame" method to button-->
+        <button @click="startGame">Start New Game</button>
+      </section>
+      <section id="controls" v-else>
+        <!--🐞 1- when we click attack button attackMonster method will be executed and "healthbar__value" will change-->
+        <button @click="attackMonster">ATTACK</button>
+        <!--🐞 6- special attack should be at every three round. we have to disable it if the divison is three does not leave a remainder of zero. add a computed property to do that.-->
+        <button :disabled="useSpecialAttack" @click="specialAttackMonster">
+          SPECIAL ATTACK
+        </button>
+        <!--🐞7- heal button, -->
+        <button @click="healPlayer">HEAL</button>
+        <button @click="surrender">SURRENDER</button>
+      </section>
+      <section id="log" class="container">
+        <h2>Battle Log</h2>
+        <!--🐞13- bind "addLogMessage" method to list. Use v-for for list items-->
+        <ul>
+          <li v-for="logMessage in logMessages">
+            <!--🐞14- add "span" to write messages-->
+            <span
+              :class="{'log--player':logMessage.actionBy === 'player', 'log--monster':logMessage.actionBy ==='monster'}"
+              >{{logMessage.actionBy === 'player' ? 'Player' : 'Monster'}}</span
+            >
+            <span v-if="logMessage.actionType ==='heal'">
+              heals himself for
+              <span class="log--heal">{{logMessage.actionValue}}</span></span
+            >
+            <span v-else>
+              attacks and deals
+              <span class="log--damage">{{logMessage.actionValue}}</span>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
