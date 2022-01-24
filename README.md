@@ -9,12 +9,12 @@ This project is a little bit bigger project called “monster slayer game” tha
 There are various options for fighting against a monster, there is a battle log where we can see what happened. 
 
 With this project I practiced with:
-data binding
-interpolation
-v-bind
-event binding with v-on
-output lists of data with v-for
-conditional content with v-if, v-else
+data binding,
+interpolation,
+v-bind,
+event binding with v-on,
+output lists of data with v-for,
+conditional content with v-if and v-else
 
 # Technologies & Techniques Used:
 •	VUE 3
