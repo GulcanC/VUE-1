@@ -18,12 +18,21 @@ conditional content with v-if, v-else
 
 # Technologies & Techniques Used:
 •	VUE 3
+
 •	CSS, HTML
+
 •	data binding
+
 •	interpolation
+
 •	v-bind
+
 •	event binding with v-on
+
 •	output lists of data with v-for
+
 •	conditional content with v-if, v-else
+
 •	Git
+
 •	GitHub-pages
