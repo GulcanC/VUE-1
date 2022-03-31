@@ -12,9 +12,9 @@ This is my first VUE.js project as a part of the projects of the bestselling cou
 This project is called “monster slayer game” that I dived deep into Vue JS. 
 There are various options for fighting against a monster, there is a battle log where we can see what happened. 
 
-We start creating a Vue app by calling Vue.app() and we store it as a constant, then we mount that app to the div element with an "id" name. Data is core concept of Vue apps that we can thinks them as a variables in the regular JavaScript. In this game we manage some data like player's health and monster's health. We need data this data option in our Vue app configuration object and we return the object that holds our data. 
+We start creating this Vue app by calling Vue.app() function and we store it as a constant, then we mount that app to the div element with an "id" name. Data is core concept of Vue apps that we can thinks them as a variables in the regular JavaScript. In this game we manage some data like player's health and monster's health. We need this data option in our Vue app configuration object and we return the object that holds our data. 
 
-Another important feature in Vue app is methods, for example when we click "attack" button, we trigger a method that reduces the monster health. 
+Another important feature in Vue app is methods. For example, when we click "attack" button, we trigger a method that reduces the monster health. For this purpose we use randam value. To calculate a random value, we use Math.random() function which gives us a random number between 0 and 1. In this project we want to get an integer random number between minimum and maximum value. For doing this we use Math.floor() method that rounds down a decimal number to get an integer number. (For exemple, 5.87 is 5, -5.98 is -6)
 
 
 
