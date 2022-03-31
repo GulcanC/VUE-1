@@ -16,7 +16,7 @@ We start creating this Vue app by calling Vue.app() function and we store it as 
 
 Another important feature in Vue app is methods. For example, when we click "attack" button, we trigger a method that reduces the monster health. For this purpose we use randam value. To calculate a random value, we use Math.random() function which gives us a random number between 0 and 1. In this project we want to get an integer random number between minimum and maximum value. For doing this we use Math.floor() method that rounds down a decimal number to get an integer number. (For exemple, 5.87 is 5, -5.98 is -6)
 
-<details><summary> 	:point_up_2:Click Me! The formula to calculate an integer random number between 5 and 12</summary>
+<details><summary> 	:point_up_2: Click Me! :point_up_2:The formula to calculate an integer random number between 5 and 12</summary>
   
 Math.floor(Math.random() * (12 - 5)) + 5;
   
