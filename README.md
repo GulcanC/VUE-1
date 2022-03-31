@@ -5,7 +5,7 @@ https://gulcanc.github.io/VUE-1/
 
 # About the Project
 This is my first VUE.js project as a part of the projects of the bestselling course “UDEMY - Vue - The Complete Guide (w/ Router, Vuex, Composition API)”. 
-This project is a little bit bigger project called “monster slayer game” that I dived deep into Vue JS. 
+This project is called “monster slayer game” that I dived deep into Vue JS. 
 There are various options for fighting against a monster, there is a battle log where we can see what happened. 
 
 With this project I practiced with:
