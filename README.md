@@ -1,9 +1,9 @@
 # VUE PROJECT 1 | Monster Slayer Game
 
-## Go to the Project Page
+### Go to the Project Page
 https://gulcanc.github.io/VUE-1/
 
-## About the Project
+### About the Project
 This is my first VUE.js project as a part of the projects of the bestselling course “UDEMY - Vue - The Complete Guide (w/ Router, Vuex, Composition API)”. 
 This project is called “monster slayer game” that I dived deep into Vue JS. 
 There are various options for fighting against a monster, there is a battle log where we can see what happened. 
@@ -16,7 +16,7 @@ event binding with v-on,
 output lists of data with v-for,
 conditional content with v-if and v-else
 
-## Technologies & Techniques Used:
+### Technologies & Techniques Used:
 •	VUE 3
 
 •	CSS, HTML
