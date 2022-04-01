@@ -10,9 +10,9 @@ The purpose of this project is taking over control over some HTML code with Vue.
 ### About the Project
 This is my first VUE.js project as a part of the projects of the bestselling course “UDEMY - Vue - The Complete Guide (w/ Router, Vuex, Composition API)”. 
 This project is called “monster slayer game” that I dived deep into Vue JS. 
-There are various options for fighting against a monster, there are health bars to be reduced and there is a battle log where we can see what happened. When we click monster attack button or player attack button, the bars will be reduced. We can use special attack button for every three round. And there is a heal button for player to heal itself. 
+There are various options for fighting against a monster, there are health bars to be reduced and there is a battle log where we can see what happened. When we click monster attack button or player attack button, the bars will be reduced. We can use special attack button for every three round. And there is a heal button for just the player to heal itself. 
 
-We start creating this Vue app by calling ***Vue.app()*** function and we store it as a constant, then we ***mount*** that app to the div element with an "id" name ***Data*** is core concept of Vue apps that we can thinks them as a variables in the regular JavaScript. In this game we manage some data like player's health and monster's health. We need this data option in our Vue app configuration object and we return the object that holds our data. 
+We start creating this Vue app by calling ***Vue.app()*** function and we store it as a constant, then we ***mount*** that app to the div element with an "id" name. ***Data*** is core concept of Vue apps that we can thinks them as a variables in the regular JavaScript. In this game we manage some data like player's health and monster's health. We need this data option in our Vue app configuration object and we return the object that holds our data. 
 
 Another important feature in Vue app is ***methods***. For example, when we click "attack" button, we trigger a method that reduces the monster health. For this purpose we use randam value. To calculate a random value, we us ***Math.random() function which gives us a random number between 0 and 1. In this project we want to get an integer random number between minimum and maximum value. For doing this we use ***Math.floor()*** method that rounds down a decimal number to get an integer number. (For exemple, 5.87 is 5, -5.98 is -6)
 
@@ -41,9 +41,13 @@ The heal button is just for the player to heal itself. To calculate a heal value
 
 To check who won or lost the game we control the health values, for this reason we use ***watch property*** in our object. Here we use conditional content. First condition is draw, if player health is smaller than or equal to 0 and the monster health also is smaller than or equal to 0, the result is draw. Second condition is  the player health is smaller than or equal to 0, the monster win the game. The third condition is that if the monster health is maller than or equal to 0 the player win the game. 
 
-When the game over, we will see the message who won or lost, for doing this we add a data property winner which initially equals to "null". By using this keyword in watch property we set winner message as draw or player or monster. In our HTML template there is a container that show these messages. Here we use thruty and falsy values; at the beginning winner is null so it is a falsy value. 
+When the game over, we will see the message who won or lost, for doing this we add a data property winner which initially equals to "null". By using this keyword in watch property we set winner message as draw or player or monster. In our HTML template there is a container that shows these messages. Here we use thruty and falsy values; at the beginning winner is null so it is a falsy value, this means initially there is nor winner or loser. For getting the message, we use v-if, v-else-if and v-else conditional statements. 
 
+To empty the health bars when the game over, we use again computed property to set the width of the loser's bar to 0%. 
 
+There is another button to restart the new game. For restarting the new game, we need a method that resets all parameters and returns all initial parameters. To achive this, we use again a method and @clik listener to bind the method to our HTML template. 
+
+Finally we add a battle log to basically keep track of which action occured. We add a new method that includes three parameters who, what and value. It will give us the information about who attacked, what is the action and the value of the damage or the heal. In data property we add a log message array which is initially empty. In this method we use ***unshift() method*** to add the message at the beginning of the array. To output of these messages, we have an unordered list in our HTML template and on list items we use ***v-for*** which allows us to repeat this list item elements. Here we use ***in*** keyword to access every single log message and interpolation to output the action by field like who, what and value. 
 
 ### Technologies & Techniques Used:
 VUE 3 :round_pushpin: CSS3 :round_pushpin: HTML5 :round_pushpin:  Git :round_pushpin: GitHub-pages 
