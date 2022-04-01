@@ -10,7 +10,7 @@ The purpose of this project is taking over control over some HTML code with Vue.
 ### About the Project
 This is my first VUE.js project as a part of the projects of the bestselling course “UDEMY - Vue - The Complete Guide (w/ Router, Vuex, Composition API)”. 
 This project is called “monster slayer game” that I dived deep into Vue JS. 
-There are various options for fighting against a monster, there are health bars to be reduced and there is a battle log where we can see what happened. 
+There are various options for fighting against a monster, there are health bars to be reduced and there is a battle log where we can see what happened. When we click monster attack button or player attack button, the bars will be reduced. We can use special attack button for every three round. And there is a heal button for player to heal itself. 
 
 We start creating this Vue app by calling ***Vue.app()*** function and we store it as a constant, then we ***mount*** that app to the div element with an "id" name ***Data*** is core concept of Vue apps that we can thinks them as a variables in the regular JavaScript. In this game we manage some data like player's health and monster's health. We need this data option in our Vue app configuration object and we return the object that holds our data. 
 
@@ -36,6 +36,13 @@ Instead of this first way, we can create ***the computed property*** in our view
 For "special attack button" we have to restrict the round number , this means we can only use "special attack button" every three rounds. To achive this we use ***disabled attribute***, we access data property and use modulus operator to divide it by 3 find out what the remainder of this division is. If remainder is not 0, this is not dividable by three and therefore we know we are not in the third, sixth or ninth round. So we will disabled it if the divison of three does not leave a remainderof 0. 
 
 :droplet: **:disabled = "currentRound % 3 !==0"**
+
+The heal button is just for the player to heal itself. To calculate a heal value we use again the same get random value function. Here we check player health when we add the heal value to it. If total value exceed 100, we set the player health to 100, so we can not go higher than that value. If our current health plus the calculated heal value does not exceed 100, we add the heal value to the player health but again we can not go above 100. 
+
+To check who won or lost the game we control the health values, for this reason we use ***watch property*** in our object. Here we use conditional content. First condition is draw, if player health is smaller than or equal to 0 and the monster health also is smaller than or equal to 0, the result is draw. Second condition is  the player health is smaller than or equal to 0, the monster win the game. The third condition is that if the monster health is maller than or equal to 0 the player win the game. 
+
+When the game over, we will see the message who won or lost, for doing this we add a data property winner which initially equals to "null". By using this keyword in watch property we set winner message as draw or player or monster. In our HTML template there is a container that show these messages. Here we use thruty and falsy values; at the beginning winner is null so it is a falsy value. 
+
 
 
 ### Technologies & Techniques Used:
