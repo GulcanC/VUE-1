@@ -31,7 +31,7 @@ When we click the buttons our health bars will be reduced, to achive this we use
 Instead of this first way, we can create ***the computed property*** in our view instance config object. We use computed property because putting too much logic in our templates can make them bloated and hard to maintain.
 
 **computed : { monsterBarStyles() {
-  return { width: this.monsterHealth + '%' }; } **
+  return { width: this.monsterHealth + '%' }; }**
 
 ### Technologies & Techniques Used:
 •	VUE 3
