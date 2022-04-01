@@ -54,6 +54,4 @@ VUE 3 | CSS3 | HTML5 | Git | GitHub-pages
 
 ### Techniques Used:
 
-data binding :round_pushpin: interpolation :round_pushpin: v-bind :round_pushpin: event binding with v-on:click or @click :round_pushpin: output lists of data with v-for 
-
-:round_pushpin: conditional content with v-if, v-else :round_pushpin: click listener @click :round_pushpin: unshift() method :round_pushpin:
+data binding :round_pushpin: interpolation :round_pushpin: v-bind :round_pushpin: event binding with v-on:click or @click :round_pushpin: output lists of data with v-for :round_pushpin: conditional content with v-if, v-else :round_pushpin: click listener @click :round_pushpin: unshift() method :round_pushpin:
