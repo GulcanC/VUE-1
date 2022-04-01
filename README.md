@@ -22,7 +22,7 @@ Math.floor(Math.random() * (12 - 5)) + 5;
   
 </details>
 
-
+We need to connect our methods to our HTML file, for example for "attack button" we have to add "click listener" to it. We can do that by using 🖌️v-on:click or 🖌️:click. 
 
 ### Technologies & Techniques Used:
 •	VUE 3
