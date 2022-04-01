@@ -49,6 +49,19 @@ There is another button to restart the new game. For restarting the new game, we
 
 Finally, we add a battle log to basically keep track of which action occured. We add a new method that includes three parameters who, what and value. It will give us the information about who attacked, what is the action and the value of the damage or the heal. In data property, we add a log message array which is initially empty. In this method we use ***unshift() method*** to add the message at the beginning of the array. To output of these messages, we have an unordered list in our HTML template and on list items we use ***v-for*** which allows us to repeat this list item elements. Here we use ***in*** keyword to access every single log message and interpolation to output the action by field like who, what and value. 
 
+### Unshift() Method:
+The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+<details><summary> 	:point_up_2:!Click Me! :point_up_2: </summary>
+  
+let arr = [4, 5, 6]
+
+arr.unshift(1, 2, 3)
+
+console.log(arr); // [1, 2, 3, 4, 5, 6]
+  
+</details>
+
 ### Technologies Used:
 VUE 3 | CSS3 | HTML5 | Git | GitHub-pages 
 
