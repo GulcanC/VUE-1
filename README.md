@@ -26,11 +26,11 @@ We need to connect our methods to our HTML file, for example for "attack button"
 
 When we click the buttons our health bars will be reduced, to achive this we use ***inline style attribute*** and set it dynamically, this means we use ***v-bind:style*** or ***:style***. Then we pass an object to our style binding, in this object we define which CSS property we want to change and we give that property a potentialy dynamic value. In our project we change ***width*** property and we set it a value which will be dynamic. For example for monsterHealth the first way is :
 
-:sign: **:style = "{monsterHealth + '%'}"**
+:circle: **:style = "{monsterHealth + '%'}"**
 
 Instead of this first way, we can create ***the computed property*** in our view instance config object. We use computed property because putting too much logic in our templates can make them bloated and hard to maintain.
 
-:sign: **computed : { monsterBarStyles() {
+:circle: **computed : { monsterBarStyles() {
   return { width: this.monsterHealth + '%' }; }**
 
 ### Technologies & Techniques Used:
