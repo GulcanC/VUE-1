@@ -33,7 +33,7 @@ Instead of this first way, we can create ***the computed property*** in our view
 :droplet: **computed : { monsterBarStyles() {
   return { width: this.monsterHealth + '%' }; }**
   
-
+For "special attack button" we have to restrict the round number , this means we can only use "special attack button" every three rounds. To achive this we use ***disabled attribute*** 
 
 ### Technologies & Techniques Used:
 VUE 3 :round_pushpin: CSS3 :round_pushpin: HTML5 :round_pushpin:  Git :round_pushpin: GitHub-pages 
