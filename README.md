@@ -50,7 +50,7 @@ There is another button to restart the new game. For restarting the new game, we
 Finally, we add a battle log to basically keep track of which action occured. We add a new method that includes three parameters who, what and value. It will give us the information about who attacked, what is the action and the value of the damage or the heal. In data property, we add a log message array which is initially empty. In this method we use ***unshift() method*** to add the message at the beginning of the array. To output of these messages, we have an unordered list in our HTML template and on list items we use ***v-for*** which allows us to repeat this list item elements. Here we use ***in*** keyword to access every single log message and interpolation to output the action by field like who, what and value. 
 
 ### Technologies Used:
-VUE 3 :round_pushpin: CSS3 :round_pushpin: HTML5 :round_pushpin:  Git :round_pushpin: GitHub-pages 
+VUE 3 | CSS3 | HTML5 | Git | GitHub-pages 
 
 ### Techniques Used:
 
