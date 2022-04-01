@@ -24,7 +24,14 @@ Math.floor(Math.random() * (12 - 5)) + 5;
 
 We need to connect our methods to our HTML file, for example for "attack button" we have to add "click listener" to it. We can do that by using ***v-on:click*** or ***@click*** and as a value we have to add our method name like ***monsterHealth*** or ***monsterHealth()***.
 
-When we click the buttons our health bars will be reduced, to achive this we use ***inline style attribute*** and set it dynamically, this means we use ***v-bind:style*** or ***:style***.
+When we click the buttons our health bars will be reduced, to achive this we use ***inline style attribute*** and set it dynamically, this means we use ***v-bind:style*** or ***:style***. Then we pass an object to our style binding, in this object we define which CSS property we want to change and we give that property a potentialy dynamic value. In our project we change ***width*** property and we set it a value which will be dynamic. For example for monsterHealth the first way is :
+
+**:style = "{monsterHealth + '%'}"**
+
+Instead of this first way, we can create ***the computed property*** in our view instance config object. We use computed property because putting too much logic in our templates can make them bloated and hard to maintain.
+
+**computed : { monsterBarStyles() {
+  return { width: this.monsterHealth + '%' }; } **
 
 ### Technologies & Techniques Used:
 •	VUE 3
