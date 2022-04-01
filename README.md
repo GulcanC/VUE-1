@@ -36,6 +36,6 @@ Instead of this first way, we can create ***the computed property*** in our view
 
 
 ### Technologies & Techniques Used:
-VUE 3 :round_pushpin: CSS3:round_pushpin: HTML5 :round_pushpin:  Git :round_pushpin: GitHub-pages 
+VUE 3 :round_pushpin: CSS3 :round_pushpin: HTML5 :round_pushpin:  Git :round_pushpin: GitHub-pages 
 
 data binding :round_pushpin: interpolation :round_pushpin: v-bind :round_pushpin: event binding with v-on :round_pushpin: output lists of data with v-for :round_pushpin: conditional content with v-if, v-else :round_pushpin: click listener @click
