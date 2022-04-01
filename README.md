@@ -36,4 +36,6 @@ Instead of this first way, we can create ***the computed property*** in our view
 
 
 ### Technologies & Techniques Used:
-VUE 3 | CSS3, HTML5 | data binding | interpolation | v-bind | event binding with v-on | output lists of data with v-for | conditional content with v-if, v-else | Git | GitHub-pages
+VUE 3 | CSS3, HTML5 |  Git | GitHub-pages 
+
+data binding | interpolation | v-bind | event binding with v-on | output lists of data with v-for | conditional content with v-if, v-else | click listener @click
