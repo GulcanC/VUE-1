@@ -33,7 +33,10 @@ Instead of this first way, we can create ***the computed property*** in our view
 :droplet: **computed : { monsterBarStyles() {
   return { width: this.monsterHealth + '%' }; }**
   
-For "special attack button" we have to restrict the round number , this means we can only use "special attack button" every three rounds. To achive this we use ***disabled attribute*** 
+For "special attack button" we have to restrict the round number , this means we can only use "special attack button" every three rounds. To achive this we use ***disabled attribute***, we access data property and use modulus operator to divide it by 3 find out what the remainder of this division is. If remainder is not 0, this is not dividable by three and therefore we know we are not in the third, sixth or ninth round. So we will disabled it if the divison of three does not leave a remainderof 0. 
+
+:droplet: **:disabled = "currentRound % 3 !==0"**
+
 
 ### Technologies & Techniques Used:
 VUE 3 :round_pushpin: CSS3 :round_pushpin: HTML5 :round_pushpin:  Git :round_pushpin: GitHub-pages 
